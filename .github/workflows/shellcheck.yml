@@ -1,3 +1,3 @@
-- name: ShellCheck
+  name: ShellCheck
   uses: ludeeus/action-shellcheck@2.0.0
 
