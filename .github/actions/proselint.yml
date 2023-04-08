@@ -1,0 +1,17 @@
+name: Proselint
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  proselint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install proselint
+      run: pip install proselint
+    - name: Run proselint
+      run: |
+        find . -type f -name "*.md" -print0 | xargs -0 proselint
+
